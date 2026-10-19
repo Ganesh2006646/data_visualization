@@ -1,0 +1,5 @@
+RuleID,Ethical Principle,Misleading Distortion Tactic,Ethical Correction Principle,Rubric Section,Compliance Status
+1,1. Enforce True Zero Baselines,Y-Axis truncated at 0.200 fakes 300% alarming spike,Start linear bar/column charts strictly at zero baseline 0.000,Section 2: Misleading Chart & Ethical Redesign (2 Marks),100% Compliant
+2,2. Quantify Distribution Spread,Hiding variance masks that ocean swings dwarf annual shifts,Include 25th-75th Percentile IQR error bands with medians,Section 2: Chart Customization & Visual Design (3 Marks),100% Compliant
+3,3. State Sample Sizes & Effort,Omits COVID-19 cruise expedition drop from 589 to 289 tows,Explicitly report sample counts (n) on all temporal trajectories,Section 2: Analytical Insights & Interpretation (3 Marks),100% Compliant
+4,4. Unit & Compartment Isolation,"Averaging across water pieces/m3, sand pieces/m3, and sediment pieces/kg",Isolate distinct physical matrices into separate analytical facets,Section 1: Data Preparation & Quality (5 Marks),100% Compliant

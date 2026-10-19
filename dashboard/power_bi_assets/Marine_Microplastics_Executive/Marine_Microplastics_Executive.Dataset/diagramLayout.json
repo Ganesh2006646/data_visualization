@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 275.60796349486509,
+            "y": 550.463652780038
+          },
+          "nodeIndex": "Dim_Calendar",
+          "nodeLineageTag": "d48fbceb-36f6-401f-bd74-ba54e057296d",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 276.22720505393147
+          },
+          "nodeIndex": "Dim_MarineSetting",
+          "nodeLineageTag": "3a4b51f5-5d56-4cae-890a-b78c33fe4005",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 659.95949388061376,
+            "y": 415.17163306216196
+          },
+          "nodeIndex": "Dim_Ocean",
+          "nodeLineageTag": "a7bbcab7-2cc8-4c89-800e-9e8964b9fe23",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 198.63053563571697,
+            "y": 0
+          },
+          "nodeIndex": "Dim_Organization",
+          "nodeLineageTag": "687dbc54-23fb-4e8e-8fe0-47459fdb8d49",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 659.94396415443828,
+            "y": 39.974877426906346
+          },
+          "nodeIndex": "Dim_SamplingMethod",
+          "nodeLineageTag": "c97c423b-effa-4ddd-9b45-9ab45d07495c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 375.75612262338831,
+            "y": 200.22648811791095
+          },
+          "nodeIndex": "Fact_Observations",
+          "nodeLineageTag": "f90d1760-eac1-4596-8d26-00d159497ec5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

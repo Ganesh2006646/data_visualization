@@ -1,0 +1,737 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Fact_Observations\",\"Dim_Calendar\",\"Dim_Ocean\",\"Dim_MarineSetting\",\"Dim_SamplingMethod\",\"Dim_Organization\",\"Dim_EthicalAudit\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "Fact_Observations_DateKey",
+        "fromColumn": "DateKey",
+        "fromTable": "Fact_Observations",
+        "toColumn": "DateKey",
+        "toTable": "Dim_Calendar"
+      },
+      {
+        "name": "Fact_Observations_OceanID",
+        "fromColumn": "OceanID",
+        "fromTable": "Fact_Observations",
+        "toColumn": "OceanID",
+        "toTable": "Dim_Ocean"
+      },
+      {
+        "name": "Fact_Observations_SettingID",
+        "fromColumn": "SettingID",
+        "fromTable": "Fact_Observations",
+        "toColumn": "SettingID",
+        "toTable": "Dim_MarineSetting"
+      },
+      {
+        "name": "Fact_Observations_MethodID",
+        "fromColumn": "MethodID",
+        "fromTable": "Fact_Observations",
+        "toColumn": "MethodID",
+        "toTable": "Dim_SamplingMethod"
+      },
+      {
+        "name": "Fact_Observations_OrganizationID",
+        "fromColumn": "OrganizationID",
+        "fromTable": "Fact_Observations",
+        "toColumn": "OrganizationID",
+        "toTable": "Dim_Organization"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Fact_Observations",
+        "columns": [
+          {
+            "name": "ObservationID",
+            "dataType": "string",
+            "lineageTag": "fa0b7510-ce1e-4b45-94c5-36392133d01e",
+            "sourceColumn": "ObservationID"
+          },
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "lineageTag": "7ea9de6f-fca6-4c9d-8754-0ea99d63f38b",
+            "sourceColumn": "DateKey"
+          },
+          {
+            "name": "DateStr",
+            "dataType": "string",
+            "lineageTag": "d712f77a-659c-4a45-a1b7-c924bb4d0331",
+            "sourceColumn": "DateStr"
+          },
+          {
+            "name": "OceanID",
+            "dataType": "int64",
+            "lineageTag": "1264b566-71c7-47da-a8c4-a0a3c933d7b5",
+            "sourceColumn": "OceanID"
+          },
+          {
+            "name": "SettingID",
+            "dataType": "int64",
+            "lineageTag": "f260584b-f1c6-4970-960a-43bd267a9ead",
+            "sourceColumn": "SettingID"
+          },
+          {
+            "name": "MethodID",
+            "dataType": "int64",
+            "lineageTag": "5aa78587-9626-4dee-8484-7bbc63d38ec0",
+            "sourceColumn": "MethodID"
+          },
+          {
+            "name": "OrganizationID",
+            "dataType": "int64",
+            "lineageTag": "9424b762-99e9-4723-be50-6149c33ee0f1",
+            "sourceColumn": "OrganizationID"
+          },
+          {
+            "name": "Latitude",
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "lineageTag": "5126f434-8d7d-4078-8fd0-7256effa7161",
+            "sourceColumn": "Latitude"
+          },
+          {
+            "name": "Longitude",
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "lineageTag": "98479a7f-355f-4d4d-9586-fb13ca5092c3",
+            "sourceColumn": "Longitude"
+          },
+          {
+            "name": "ValidCoordinates",
+            "dataType": "boolean",
+            "lineageTag": "fecfecc4-2b8c-4fb8-9fea-40cd1806bebf",
+            "sourceColumn": "ValidCoordinates"
+          },
+          {
+            "name": "MeasurementNumeric",
+            "dataType": "double",
+            "lineageTag": "08e45d9b-eba8-40a7-8428-dbe5ad9f8509",
+            "sourceColumn": "MeasurementNumeric"
+          },
+          {
+            "name": "NurdleNumeric",
+            "dataType": "double",
+            "lineageTag": "e7b25a18-f9f2-4e43-a12d-31ce0bc7eff1",
+            "sourceColumn": "NurdleNumeric"
+          },
+          {
+            "name": "MeasurementForAnalysis",
+            "dataType": "double",
+            "lineageTag": "d45b6bb3-a711-484b-8de2-3fac8e14853b",
+            "sourceColumn": "MeasurementForAnalysis"
+          },
+          {
+            "name": "Log10p1Measurement",
+            "dataType": "double",
+            "lineageTag": "f72b2298-a9d4-4a31-b13b-d7ed882fc2f9",
+            "sourceColumn": "Log10p1Measurement"
+          },
+          {
+            "name": "ConcentrationClass",
+            "dataType": "string",
+            "lineageTag": "cd23b729-bdad-44cc-b142-7e9f137eda7b",
+            "sortByColumn": "SeverityOrder",
+            "sourceColumn": "ConcentrationClass"
+          },
+          {
+            "name": "SeverityOrder",
+            "dataType": "int64",
+            "lineageTag": "f7b77eff-2007-4f32-8edb-531c525a14da",
+            "sourceColumn": "SeverityOrder"
+          },
+          {
+            "name": "MeshSize_mm",
+            "dataType": "double",
+            "lineageTag": "92a7111f-1079-4d25-852f-f4d0d8eef5a8",
+            "sourceColumn": "MeshSize_mm"
+          },
+          {
+            "name": "ShortReference",
+            "dataType": "string",
+            "lineageTag": "f596b113-2433-46dd-9da7-d0ea064aff0d",
+            "sourceColumn": "ShortReference"
+          }
+        ],
+        "lineageTag": "f80e306d-a8c0-4e70-891f-1be713ed963b",
+        "measures": [
+          {
+            "name": "Total Observations",
+            "expression": "COUNTROWS('Fact_Observations')",
+            "formatString": "#,0",
+            "lineageTag": "0f633690-4729-423a-8f5c-5639e33c7746"
+          },
+          {
+            "name": "Northern Hemisphere Records",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Fact_Observations'[Latitude] >= 0))",
+            "formatString": "#,0",
+            "lineageTag": "70cd8431-37b6-401d-acf4-032585ad776d"
+          },
+          {
+            "name": "Northern Hemisphere Share %",
+            "expression": "COALESCE(DIVIDE([Northern Hemisphere Records], [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "34f4a1bf-1c4e-4692-a50c-7063a79c8672"
+          },
+          {
+            "name": "Southern Ocean Records",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Dim_Ocean'[Ocean Basin] = \"Southern Ocean\"))",
+            "formatString": "#,0",
+            "lineageTag": "a7432266-1910-4e0f-a4e9-8dc24e51c3f5"
+          },
+          {
+            "name": "Southern Ocean Share %",
+            "expression": "COALESCE(DIVIDE([Southern Ocean Records], [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "96ef3d09-ed1c-4335-8b7e-8f4b561d83c0"
+          },
+          {
+            "name": "Geographic Integrity %",
+            "expression": "COALESCE(DIVIDE(CALCULATE([Total Observations], KEEPFILTERS('Fact_Observations'[ValidCoordinates] = TRUE())), [Total Observations], 1.0), 1.0)",
+            "formatString": "0.0%",
+            "lineageTag": "7bc4e732-b205-4eba-a668-e5f42ad87e6f"
+          },
+          {
+            "name": "Standard Net Records",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Fact_Observations'[MeshSize_mm] >= 0.300), KEEPFILTERS('Fact_Observations'[MeshSize_mm] <= 0.350))",
+            "formatString": "#,0",
+            "lineageTag": "fd514488-011f-4413-a86f-d19070631965"
+          },
+          {
+            "name": "Standard Net Share %",
+            "expression": "COALESCE(DIVIDE([Standard Net Records], [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "fcaa45de-6f9a-4d16-8cff-96c521e959b6"
+          },
+          {
+            "name": "Harmonization Benchmark",
+            "expression": "0.80",
+            "formatString": "0.0%",
+            "lineageTag": "7cdd0947-ca1c-41ca-b459-2fe276b0d96b"
+          },
+          {
+            "name": "Zero Observations",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Fact_Observations'[MeasurementForAnalysis] = 0.0))",
+            "formatString": "#,0",
+            "lineageTag": "e13545e8-7a4c-4e2e-af35-55930ad7989d"
+          },
+          {
+            "name": "Zero-Inflation %",
+            "expression": "COALESCE(DIVIDE([Zero Observations], [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "3ea0fb06-de6b-4e03-8d63-adaa48e09240"
+          },
+          {
+            "name": "Water Column Tows",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Dim_MarineSetting'[Marine Setting] = \"Ocean water\"))",
+            "formatString": "#,0",
+            "lineageTag": "672e52de-8d1d-4456-a724-244c7a1ed7de"
+          },
+          {
+            "name": "Nurdle Beach Patrols",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Dim_MarineSetting'[Marine Setting] = \"Nurdle Patrol\"))",
+            "formatString": "#,0",
+            "lineageTag": "8fd4ee51-5e64-4e68-90dc-e355fc80e9a3"
+          },
+          {
+            "name": "High Severity Records",
+            "expression": "CALCULATE([Total Observations], KEEPFILTERS('Fact_Observations'[ConcentrationClass] IN {\"High\", \"Very High\"}))",
+            "formatString": "#,0",
+            "lineageTag": "1ee651fc-ec36-4d71-bf9b-36cdb2b2da7c"
+          },
+          {
+            "name": "High Severity Share %",
+            "expression": "COALESCE(DIVIDE([High Severity Records], [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "11c85c68-e7a8-478a-9b2f-e05fc7f2086d"
+          },
+          {
+            "name": "Beach Sand Zero-Rate %",
+            "expression": "COALESCE(DIVIDE(CALCULATE([Zero Observations], KEEPFILTERS('Dim_MarineSetting'[Marine Setting] = \"Beach\")), CALCULATE([Total Observations], KEEPFILTERS('Dim_MarineSetting'[Marine Setting] = \"Beach\")), 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "3f0f41d3-fd4a-4855-9167-87681740e54c"
+          },
+          {
+            "name": "Water Observations",
+            "expression": "CALCULATE([Total Observations], REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\")",
+            "formatString": "#,0",
+            "lineageTag": "d6ed717a-f085-4115-bed5-23e7eea95edb"
+          },
+          {
+            "name": "Water High Severity Records",
+            "expression": "CALCULATE([High Severity Records], REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\")",
+            "formatString": "#,0",
+            "lineageTag": "b57ca46c-9c25-46ad-a927-9273e9e6545b"
+          },
+          {
+            "name": "Median Concentration Water",
+            "expression": "COALESCE(CALCULATE(MEDIAN('Fact_Observations'[MeasurementForAnalysis]), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "f7d734e8-546d-4c60-b050-4129a78d75ed"
+          },
+          {
+            "name": "Average Longitude",
+            "expression": "AVERAGE('Fact_Observations'[Longitude])",
+            "formatString": "0.00",
+            "lineageTag": "613b5d66-a0a1-4e25-b7bd-4c083c4cd864"
+          },
+          {
+            "name": "Average Latitude",
+            "expression": "AVERAGE('Fact_Observations'[Latitude])",
+            "formatString": "0.00",
+            "lineageTag": "d40379b9-9593-451b-8881-8f7d5114ebd9"
+          },
+          {
+            "name": "Log Median Concentration Water",
+            "expression": "VAR MedianValue = [Median Concentration Water] RETURN IF(MedianValue > 0, LOG10(MedianValue), BLANK())",
+            "formatString": "0.000",
+            "lineageTag": "8cdd63f5-c4cf-4b30-a868-84255b89cff5"
+          },
+          {
+            "name": "Mean Concentration Water",
+            "expression": "COALESCE(CALCULATE(AVERAGE('Fact_Observations'[MeasurementForAnalysis]), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "f36a54e0-d1f9-48e0-bb76-20547be0c03a"
+          },
+          {
+            "name": "Concentration 25th Pct",
+            "expression": "COALESCE(CALCULATE(PERCENTILE.INC('Fact_Observations'[MeasurementForAnalysis], 0.25), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "97b32f28-8273-4ca0-9560-19f43f35c172"
+          },
+          {
+            "name": "Concentration 75th Pct",
+            "expression": "COALESCE(CALCULATE(PERCENTILE.INC('Fact_Observations'[MeasurementForAnalysis], 0.75), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "24f8355e-c919-4319-817e-0c84985743b7"
+          },
+          {
+            "name": "Median Concentration",
+            "expression": "COALESCE(MEDIAN('Fact_Observations'[MeasurementForAnalysis]), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "cf49d1ee-c38f-4c96-9d4b-86fc79b7f0a4"
+          },
+          {
+            "name": "Median Mesh Size Water",
+            "expression": "COALESCE(CALCULATE(MEDIAN('Fact_Observations'[MeshSize_mm]), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "202ac64e-c776-4bc1-ad42-232090d7d4f1"
+          },
+          {
+            "name": "Median Log Concentration Water",
+            "expression": "COALESCE(CALCULATE(MEDIAN('Fact_Observations'[Log10p1Measurement]), REMOVEFILTERS('Dim_MarineSetting'), 'Dim_MarineSetting'[Marine Setting] = \"Ocean water\"), 0.0)",
+            "formatString": "0.0000",
+            "lineageTag": "bed5e697-9fe4-4bab-aee7-1acff13b5814"
+          },
+          {
+            "name": "Top-2 Entity Dominance %",
+            "expression": "VAR Top2Count = CALCULATE([Total Observations], KEEPFILTERS('Dim_Organization'[Organization] IN {\"University of Texas Marine Science Institute\", \"Sea Education Association\"})) RETURN COALESCE(DIVIDE(Top2Count, [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "ed435ff0-4f13-4b18-a693-c9fc2b9edb8b"
+          },
+          {
+            "name": "Citizen Science Share %",
+            "expression": "VAR CitizenCount = CALCULATE([Total Observations], KEEPFILTERS('Dim_Organization'[Sector Type] = \"Citizen Science Network\")) RETURN COALESCE(DIVIDE(CitizenCount, [Total Observations], 0.0), 0.0)",
+            "formatString": "0.0%",
+            "lineageTag": "812791b2-fcc4-4d08-bcb1-286cb3db917a"
+          },
+          {
+            "name": "Misleading Truncated Value",
+            "expression": "VAR DisplayYear = SELECTEDVALUE('Dim_Calendar'[Year]) RETURN IF(DisplayYear IN {2019, 2020, 2021}, [Median Concentration Water], BLANK())",
+            "formatString": "0.0000",
+            "lineageTag": "6a2e1a12-852b-439b-a940-b99a15898d60"
+          },
+          {
+            "name": "Ethical Baseline Value",
+            "expression": "VAR DisplayYear = SELECTEDVALUE('Dim_Calendar'[Year]) RETURN IF(DisplayYear IN {2019, 2020, 2021}, [Median Concentration Water], BLANK())",
+            "formatString": "0.0000",
+            "lineageTag": "972ae186-4f81-4de0-93a9-2f786d026596"
+          },
+          {
+            "name": "Rubric Alignment %",
+            "expression": "1.0",
+            "formatString": "0%",
+            "lineageTag": "c6268991-de93-4db6-bc3e-6a7d99c36b13"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Observations-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Fact_Observations.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"ObservationID\", type text}, {\"DateKey\", Int64.Type}, {\"DateStr\", type text}, {\"OceanID\", Int64.Type}, {\"SettingID\", Int64.Type}, {\"MethodID\", Int64.Type}, {\"OrganizationID\", Int64.Type}, {\"Latitude\", type number}, {\"Longitude\", type number}, {\"ValidCoordinates\", type logical}, {\"MeasurementNumeric\", type number}, {\"NurdleNumeric\", type number}, {\"MeasurementForAnalysis\", type number}, {\"Log10p1Measurement\", type number}, {\"ConcentrationClass\", type text}, {\"SeverityOrder\", Int64.Type}, {\"MeshSize_mm\", type number}, {\"ShortReference\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Calendar",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "lineageTag": "e04d3e35-c290-409e-8944-ca4f7db8a23e",
+            "sourceColumn": "DateKey"
+          },
+          {
+            "name": "DateStr",
+            "dataType": "string",
+            "lineageTag": "b5107402-f275-4a8b-81e7-70d25671e8c7",
+            "sourceColumn": "DateStr"
+          },
+          {
+            "name": "Full Date",
+            "dataType": "string",
+            "lineageTag": "e0a413af-ee9e-405e-b433-e110a6eb8d9e",
+            "sourceColumn": "Full Date"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "lineageTag": "ae0e3088-d203-44fe-8e99-ec9c482a7c6b",
+            "sourceColumn": "Year"
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "lineageTag": "07e9fb05-350a-423d-b4bf-84136b73900e",
+            "sourceColumn": "Month"
+          },
+          {
+            "name": "Month Name",
+            "dataType": "string",
+            "lineageTag": "39b8f196-44ba-4b6a-a91d-18e81ce0bf35",
+            "sourceColumn": "Month Name"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "lineageTag": "e2f456fa-7e53-46b4-86f0-d90996e67655",
+            "sourceColumn": "Quarter"
+          },
+          {
+            "name": "Decade",
+            "dataType": "string",
+            "lineageTag": "89d0bdc3-fecf-4add-b414-82f30c2a4ad6",
+            "sourceColumn": "Decade"
+          },
+          {
+            "name": "Era",
+            "dataType": "string",
+            "lineageTag": "00113243-7ca8-4f6b-ac0e-c2893f965acd",
+            "sourceColumn": "Era"
+          }
+        ],
+        "lineageTag": "380dac80-e3c3-4b33-b74b-535ac9353bdd",
+        "partitions": [
+          {
+            "name": "Dim_Calendar-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_Calendar.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"DateKey\", Int64.Type}, {\"DateStr\", type text}, {\"Full Date\", type text}, {\"Year\", Int64.Type}, {\"Month\", Int64.Type}, {\"Month Name\", type text}, {\"Quarter\", type text}, {\"Decade\", type text}, {\"Era\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Ocean",
+        "columns": [
+          {
+            "name": "OceanID",
+            "dataType": "int64",
+            "lineageTag": "1e79f6c2-ba68-402d-80ff-d1b3afdff761",
+            "sourceColumn": "OceanID"
+          },
+          {
+            "name": "Ocean Basin",
+            "dataType": "string",
+            "lineageTag": "31540808-742b-4df7-8b37-4ec3b21860ef",
+            "sourceColumn": "Ocean Basin"
+          },
+          {
+            "name": "Hemisphere Region",
+            "dataType": "string",
+            "lineageTag": "218ad5d1-a478-4495-9d47-d393674640f6",
+            "sourceColumn": "Hemisphere Region"
+          },
+          {
+            "name": "Basin Area (M km2)",
+            "dataType": "double",
+            "lineageTag": "bc4bfe90-ae2d-4e2b-930b-127d603caad4",
+            "sourceColumn": "Basin Area (M km2)"
+          },
+          {
+            "name": "Primary Focus",
+            "dataType": "string",
+            "lineageTag": "c06e2608-2a72-4a7c-bac2-66c3ea15a86d",
+            "sourceColumn": "Primary Focus"
+          }
+        ],
+        "lineageTag": "2c5181cb-9fba-4bfd-9613-62abb5abdca6",
+        "partitions": [
+          {
+            "name": "Dim_Ocean-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_Ocean.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"OceanID\", Int64.Type}, {\"Ocean Basin\", type text}, {\"Hemisphere Region\", type text}, {\"Basin Area (M km2)\", type number}, {\"Primary Focus\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_MarineSetting",
+        "columns": [
+          {
+            "name": "SettingID",
+            "dataType": "int64",
+            "lineageTag": "5ae50534-66fb-4b35-a70a-d20b35ca85d2",
+            "sourceColumn": "SettingID"
+          },
+          {
+            "name": "Marine Setting",
+            "dataType": "string",
+            "lineageTag": "52de4666-a9a3-4304-ab19-57ab13462ed3",
+            "sourceColumn": "Marine Setting"
+          },
+          {
+            "name": "Unit",
+            "dataType": "string",
+            "lineageTag": "3134e4e9-f79d-4ed4-b6af-da8d45bf8a64",
+            "sourceColumn": "Unit"
+          },
+          {
+            "name": "Compartment",
+            "dataType": "string",
+            "lineageTag": "04d3ff65-136d-436c-a9f7-a6edb3cc00b2",
+            "sourceColumn": "Compartment"
+          },
+          {
+            "name": "Acute Threshold",
+            "dataType": "string",
+            "lineageTag": "5155fb07-de0e-420d-9fb9-224a68c38aaa",
+            "sourceColumn": "Acute Threshold"
+          },
+          {
+            "name": "Physical Matrix",
+            "dataType": "string",
+            "lineageTag": "972454cc-ec18-4789-b573-b4e5c8c0598c",
+            "sourceColumn": "Physical Matrix"
+          }
+        ],
+        "lineageTag": "c2659854-951b-4e9d-b38b-d1b7694aa54f",
+        "partitions": [
+          {
+            "name": "Dim_MarineSetting-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_MarineSetting.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"SettingID\", Int64.Type}, {\"Marine Setting\", type text}, {\"Unit\", type text}, {\"Compartment\", type text}, {\"Acute Threshold\", type text}, {\"Physical Matrix\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_SamplingMethod",
+        "columns": [
+          {
+            "name": "MethodID",
+            "dataType": "int64",
+            "lineageTag": "eefd5afa-1c29-4c60-80f0-a9a283f13ed4",
+            "sourceColumn": "MethodID"
+          },
+          {
+            "name": "Sampling Method",
+            "dataType": "string",
+            "lineageTag": "7e2a1537-f85e-465f-964e-6912f3a14333",
+            "sourceColumn": "Sampling Method"
+          },
+          {
+            "name": "Device Category",
+            "dataType": "string",
+            "lineageTag": "c4783d5b-31b6-4238-843e-82b42a6583bc",
+            "sourceColumn": "Device Category"
+          }
+        ],
+        "lineageTag": "893da39c-b6dd-4a94-96e8-ab021358a93a",
+        "partitions": [
+          {
+            "name": "Dim_SamplingMethod-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_SamplingMethod.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"MethodID\", Int64.Type}, {\"Sampling Method\", type text}, {\"Device Category\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Organization",
+        "columns": [
+          {
+            "name": "OrganizationID",
+            "dataType": "int64",
+            "lineageTag": "e582919e-6f22-48ec-8a6f-2137d87e5d34",
+            "sourceColumn": "OrganizationID"
+          },
+          {
+            "name": "Organization",
+            "dataType": "string",
+            "lineageTag": "1a152e54-e45f-4f03-8ce1-54698a8ee3cc",
+            "sourceColumn": "Organization"
+          },
+          {
+            "name": "Sector Type",
+            "dataType": "string",
+            "lineageTag": "2a9fda46-50db-4922-8ec0-59d7dbb1a01b",
+            "sourceColumn": "Sector Type"
+          },
+          {
+            "name": "Total Records",
+            "dataType": "int64",
+            "lineageTag": "5d6a44aa-79cd-4043-a9a3-b55089c018e7",
+            "sourceColumn": "Total Records"
+          },
+          {
+            "name": "Contribution Tier",
+            "dataType": "string",
+            "lineageTag": "18801ac4-d44e-413f-b15f-551f8ba5a26c",
+            "sourceColumn": "Contribution Tier"
+          }
+        ],
+        "lineageTag": "c03cc6cd-3460-43d8-8638-c307bca607d6",
+        "partitions": [
+          {
+            "name": "Dim_Organization-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_Organization.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"OrganizationID\", Int64.Type}, {\"Organization\", type text}, {\"Sector Type\", type text}, {\"Total Records\", Int64.Type}, {\"Contribution Tier\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_EthicalAudit",
+        "columns": [
+          {
+            "name": "RuleID",
+            "dataType": "int64",
+            "lineageTag": "2f0ba389-0a35-493a-b089-4497751f539d",
+            "sourceColumn": "RuleID"
+          },
+          {
+            "name": "Ethical Principle",
+            "dataType": "string",
+            "lineageTag": "887a7ebb-7889-4a0b-b265-a711355e3c21",
+            "sourceColumn": "Ethical Principle"
+          },
+          {
+            "name": "Misleading Distortion Tactic",
+            "dataType": "string",
+            "lineageTag": "501b4c36-7cad-4db7-a94b-6f7e71f420a7",
+            "sourceColumn": "Misleading Distortion Tactic"
+          },
+          {
+            "name": "Ethical Correction Principle",
+            "dataType": "string",
+            "lineageTag": "80187eb5-d219-40c6-b70d-a67c466e7157",
+            "sourceColumn": "Ethical Correction Principle"
+          },
+          {
+            "name": "Rubric Section",
+            "dataType": "string",
+            "lineageTag": "46539f1b-cea8-448b-9431-9a5c67beb9d6",
+            "sourceColumn": "Rubric Section"
+          },
+          {
+            "name": "Compliance Status",
+            "dataType": "string",
+            "lineageTag": "9fa8b0cb-19cb-48c0-ae82-7027a9b212a0",
+            "sourceColumn": "Compliance Status"
+          }
+        ],
+        "lineageTag": "d8763578-ac0a-43eb-9638-0b7bddd1cdde",
+        "partitions": [
+          {
+            "name": "Dim_EthicalAudit-Partition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"d:\\\\marine_microplastic_pollution_analytics\\\\dashboard\\\\power_bi_assets\\\\Dim_EthicalAudit.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\", {{\"RuleID\", Int64.Type}, {\"Ethical Principle\", type text}, {\"Misleading Distortion Tactic\", type text}, {\"Ethical Correction Principle\", type text}, {\"Rubric Section\", type text}, {\"Compliance Status\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

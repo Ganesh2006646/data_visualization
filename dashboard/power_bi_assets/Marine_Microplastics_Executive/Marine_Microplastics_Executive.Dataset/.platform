@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Marine_Microplastics_Executive"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f47184fe-96cf-4a52-ae03-e46a8004363c"
+  }
+}

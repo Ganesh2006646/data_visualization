@@ -1,0 +1,364 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"type\":2,\"version\":{\"visual\":\"1.8.86\",\"report\":\"2.0.86\",\"page\":\"1.3.86\"}},\"customTheme\":{\"name\":\"Marine_Microplastics_Executive5147708398659474.json\",\"type\":1,\"version\":{\"visual\":\"2.13.0\",\"report\":\"3.4.0\",\"page\":\"2.3.1\"}}},\"activeSectionIndex\":0,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"useEnhancedTooltips\":false},\"objects\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "Page1_GeographicSurveillance",
+      "config": "{}",
+      "name": "9df7de2f46fa4cb6c573"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Marine_Microplastics_Executive5147708398659474.json",
+            "path": "Marine_Microplastics_Executive5147708398659474.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "1. Global Footprint & Geographic Surveillance",
+      "displayOption": 0,
+      "height": 720.00,
+      "name": "Page1_GeographicSurveillance",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"p1_decade\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":455,\"width\":190,\"height\":245,\"z\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Calendar.Decade\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Calendar\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Decade\"},\"Name\":\"Dim_Calendar.Decade\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Monitoring Era'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 455.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"p1_geo\",\"layouts\":[{\"id\":0,\"position\":{\"x\":755,\"y\":15,\"width\":230,\"height\":90,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Geographic Integrity %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Geographic Integrity %\"},\"Name\":\"Fact_Observations.Geographic Integrity %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Coordinate Integrity Rate'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 755.00,
+          "y": 15.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"p1_harmonisation\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1000,\"y\":15,\"width\":260,\"height\":90,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Fact_Observations.Standard Net Share %\"}],\"TargetValue\":[{\"queryRef\":\"Fact_Observations.Harmonization Benchmark\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Standard Net Share %\"},\"Name\":\"Fact_Observations.Standard Net Share %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Harmonization Benchmark\"},\"Name\":\"Fact_Observations.Harmonization Benchmark\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Global Standard Net Benchmark'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 260.00,
+          "x": 1000.00,
+          "y": 15.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"p1_north\",\"layouts\":[{\"id\":0,\"position\":{\"x\":265,\"y\":15,\"width\":230,\"height\":90,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Northern Hemisphere Share %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Northern Hemisphere Share %\"},\"Name\":\"Fact_Observations.Northern Hemisphere Share %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Northern Hemisphere Sampling Bias'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 265.00,
+          "y": 15.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"p1_setting\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":120,\"width\":190,\"height\":320,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_MarineSetting.Marine Setting\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_MarineSetting\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Marine Setting\"},\"Name\":\"Dim_MarineSetting.Marine Setting\"}]},\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Marine Setting'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 120.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"p1_south\",\"layouts\":[{\"id\":0,\"position\":{\"x\":510,\"y\":15,\"width\":230,\"height\":90,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Southern Ocean Share %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Southern Ocean Share %\"},\"Name\":\"Fact_Observations.Southern Ocean Share %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Southern Ocean Data Blindspot'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 510.00,
+          "y": 15.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"p1_total\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":15,\"width\":230,\"height\":90,\"z\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Verified Observations'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 20.00,
+          "y": 15.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"p1_v1_map\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":120,\"width\":575,\"height\":320,\"z\":7000}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.ObservationID\"}],\"X\":[{\"queryRef\":\"Fact_Observations.Average Longitude\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Average Latitude\"}],\"Legend\":[{\"queryRef\":\"Dim_Ocean.Hemisphere Region\"}],\"Tooltips\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\"},{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Dim_Ocean\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"ObservationID\"},\"Name\":\"Fact_Observations.ObservationID\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Average Longitude\"},\"Name\":\"Fact_Observations.Average Longitude\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Average Latitude\"},\"Name\":\"Fact_Observations.Average Latitude\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Hemisphere Region\"},\"Name\":\"Dim_Ocean.Hemisphere Region\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V1: Sampling Footprint by Longitude and Latitude (local coordinate plot)'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 575.00,
+          "x": 225.00,
+          "y": 120.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"p1_v2_hotspot\",\"layouts\":[{\"id\":0,\"position\":{\"x\":815,\"y\":120,\"width\":445,\"height\":320,\"z\":8000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Median Concentration Water\"}],\"Tooltips\":[{\"queryRef\":\"Fact_Observations.Water High Severity Records\"},{\"queryRef\":\"Fact_Observations.Water Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Dim_Ocean\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Concentration Water\"},\"Name\":\"Fact_Observations.Median Concentration Water\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Water High Severity Records\"},\"Name\":\"Fact_Observations.Water High Severity Records\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Water Observations\"},\"Name\":\"Fact_Observations.Water Observations\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Concentration Water\"}}}]},\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V2: Basin Sampling Effort vs Median Water Concentration'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 445.00,
+          "x": 815.00,
+          "y": 120.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"p1_v3_temporal\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":455,\"width\":1035,\"height\":245,\"z\":9000}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Calendar.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Total Observations\"}],\"Y2\":[{\"queryRef\":\"Fact_Observations.Median Concentration Water\"}],\"Series\":[{\"queryRef\":\"Dim_MarineSetting.Marine Setting\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Calendar\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0},{\"Name\":\"t_2\",\"Entity\":\"Dim_MarineSetting\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Year\"},\"Name\":\"Dim_Calendar.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Median Concentration Water\"},\"Name\":\"Fact_Observations.Median Concentration Water\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_2\"}},\"Property\":\"Marine Setting\"},\"Name\":\"Dim_MarineSetting.Marine Setting\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V3: 50-Year Monitoring Effort vs Ocean Water Trajectory'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 1035.00,
+          "x": 225.00,
+          "y": 455.00,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "2. Environmental Matrices & Ocean Basin Severity",
+      "displayOption": 0,
+      "height": 720.00,
+      "name": "Page2_EnvironmentalMatrices",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"p2_basin\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":120,\"width\":190,\"height\":320,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Ocean\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Ocean Basin'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 120.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"p2_harmonisation\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1000,\"y\":15,\"width\":260,\"height\":90,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Fact_Observations.Standard Net Share %\"}],\"TargetValue\":[{\"queryRef\":\"Fact_Observations.Harmonization Benchmark\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Standard Net Share %\"},\"Name\":\"Fact_Observations.Standard Net Share %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Harmonization Benchmark\"},\"Name\":\"Fact_Observations.Harmonization Benchmark\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Target Monitoring Harmonization'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 260.00,
+          "x": 1000.00,
+          "y": 15.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"p2_high\",\"layouts\":[{\"id\":0,\"position\":{\"x\":755,\"y\":15,\"width\":230,\"height\":90,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.High Severity Share %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"High Severity Share %\"},\"Name\":\"Fact_Observations.High Severity Share %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High and Extreme Severity Share'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 755.00,
+          "y": 15.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"p2_nurdle\",\"layouts\":[{\"id\":0,\"position\":{\"x\":265,\"y\":15,\"width\":230,\"height\":90,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Nurdle Beach Patrols\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Nurdle Beach Patrols\"},\"Name\":\"Fact_Observations.Nurdle Beach Patrols\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Nurdle Beach Patrols'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 265.00,
+          "y": 15.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"p2_severity\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":455,\"width\":190,\"height\":245,\"z\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.ConcentrationClass\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"ConcentrationClass\"},\"Name\":\"Fact_Observations.ConcentrationClass\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Severity Class'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 455.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"p2_v4_basin\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":120,\"width\":490,\"height\":320,\"z\":7000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Median Concentration Water\"}],\"Tooltips\":[{\"queryRef\":\"Fact_Observations.Concentration 25th Pct\"},{\"queryRef\":\"Fact_Observations.Concentration 75th Pct\"},{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Ocean\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Median Concentration Water\"},\"Name\":\"Fact_Observations.Median Concentration Water\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Concentration 25th Pct\"},\"Name\":\"Fact_Observations.Concentration 25th Pct\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Concentration 75th Pct\"},\"Name\":\"Fact_Observations.Concentration 75th Pct\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Median Concentration Water\"}}}]},\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V4: Ocean Basin Microplastic Concentration Benchmark'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 490.00,
+          "x": 225.00,
+          "y": 120.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"p2_v5_matrix\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":455,\"width\":1035,\"height\":245,\"z\":9000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_MarineSetting.Marine Setting\"},{\"queryRef\":\"Dim_MarineSetting.Unit\"},{\"queryRef\":\"Dim_MarineSetting.Compartment\"},{\"queryRef\":\"Fact_Observations.Total Observations\"},{\"queryRef\":\"Fact_Observations.Zero-Inflation %\"},{\"queryRef\":\"Fact_Observations.Median Concentration\"},{\"queryRef\":\"Dim_MarineSetting.Acute Threshold\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_MarineSetting\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Marine Setting\"},\"Name\":\"Dim_MarineSetting.Marine Setting\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Unit\"},\"Name\":\"Dim_MarineSetting.Unit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Compartment\"},\"Name\":\"Dim_MarineSetting.Compartment\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Zero-Inflation %\"},\"Name\":\"Fact_Observations.Zero-Inflation %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Median Concentration\"},\"Name\":\"Fact_Observations.Median Concentration\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Acute Threshold\"},\"Name\":\"Dim_MarineSetting.Acute Threshold\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V5: Compartment-Separated Profile Across Marine Settings'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 1035.00,
+          "x": 225.00,
+          "y": 455.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"p2_v8_severity\",\"layouts\":[{\"id\":0,\"position\":{\"x\":730,\"y\":120,\"width\":530,\"height\":320,\"z\":8000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Total Observations\"}],\"Series\":[{\"queryRef\":\"Fact_Observations.ConcentrationClass\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Ocean\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"ConcentrationClass\"},\"Name\":\"Fact_Observations.ConcentrationClass\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V8: Proportional Severity Class Breakdown Across Ocean Basins'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 530.00,
+          "x": 730.00,
+          "y": 120.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"p2_water\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":15,\"width\":230,\"height\":90,\"z\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Water Column Tows\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Water Column Tows\"},\"Name\":\"Fact_Observations.Water Column Tows\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Ocean Water Column Tows'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 20.00,
+          "y": 15.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"p2_zero\",\"layouts\":[{\"id\":0,\"position\":{\"x\":510,\"y\":15,\"width\":230,\"height\":90,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Beach Sand Zero-Rate %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Beach Sand Zero-Rate %\"},\"Name\":\"Fact_Observations.Beach Sand Zero-Rate %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Beach Sand Zero-Rate'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 510.00,
+          "y": 15.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "3. Protocol Standardization, Gear Bias & Provenance",
+      "displayOption": 0,
+      "height": 720.00,
+      "name": "Page3_ProtocolProvenance",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"p3_citizen\",\"layouts\":[{\"id\":0,\"position\":{\"x\":755,\"y\":15,\"width\":230,\"height\":90,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Citizen Science Share %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Citizen Science Share %\"},\"Name\":\"Fact_Observations.Citizen Science Share %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Citizen Science Contribution'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 755.00,
+          "y": 15.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"p3_device\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":455,\"width\":190,\"height\":245,\"z\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_SamplingMethod.Device Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_SamplingMethod\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Device Category\"},\"Name\":\"Dim_SamplingMethod.Device Category\"}]},\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Device Category'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 455.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"p3_rubric\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1000,\"y\":15,\"width\":260,\"height\":90,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Rubric Alignment %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Rubric Alignment %\"},\"Name\":\"Fact_Observations.Rubric Alignment %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Case Study Rubric Alignment'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 260.00,
+          "x": 1000.00,
+          "y": 15.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"p3_sector\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":120,\"width\":190,\"height\":320,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Organization.Sector Type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Organization\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Sector Type\"},\"Name\":\"Dim_Organization.Sector Type\"}]},\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sector Type'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 190.00,
+          "x": 20.00,
+          "y": 120.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"p3_standard\",\"layouts\":[{\"id\":0,\"position\":{\"x\":510,\"y\":15,\"width\":230,\"height\":90,\"z\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Standard Net Share %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Standard Net Share %\"},\"Name\":\"Fact_Observations.Standard Net Share %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Standard 333 um Net Ratio'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 510.00,
+          "y": 15.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"p3_top2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":265,\"y\":15,\"width\":230,\"height\":90,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Top-2 Entity Dominance %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Top-2 Entity Dominance %\"},\"Name\":\"Fact_Observations.Top-2 Entity Dominance %\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top-2 Entity Dominance'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 265.00,
+          "y": 15.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"p3_total\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":15,\"width\":230,\"height\":90,\"z\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Institutional Provenance Records'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.00,
+          "width": 230.00,
+          "x": 20.00,
+          "y": 15.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"p3_v6_gear\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":120,\"width\":520,\"height\":320,\"z\":7000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim_SamplingMethod.Sampling Method\",\"active\":true}],\"Columns\":[{\"queryRef\":\"Dim_Ocean.Ocean Basin\",\"active\":true}],\"Values\":[{\"queryRef\":\"Fact_Observations.Median Concentration Water\"},{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_SamplingMethod\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Dim_Ocean\",\"Type\":0},{\"Name\":\"t_2\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Sampling Method\"},\"Name\":\"Dim_SamplingMethod.Sampling Method\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Ocean Basin\"},\"Name\":\"Dim_Ocean.Ocean Basin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_2\"}},\"Property\":\"Median Concentration Water\"},\"Name\":\"Fact_Observations.Median Concentration Water\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_2\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Sampling Method\"}}}]},\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V6: Sampling Method by Ocean Basin Matrix'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 520.00,
+          "x": 225.00,
+          "y": 120.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"p3_v7_mesh\",\"layouts\":[{\"id\":0,\"position\":{\"x\":760,\"y\":120,\"width\":500,\"height\":320,\"z\":8000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Fact_Observations.Median Mesh Size Water\"},{\"queryRef\":\"Fact_Observations.Median Log Concentration Water\"},{\"queryRef\":\"Fact_Observations.Water Observations\"},{\"queryRef\":\"Fact_Observations.Median Concentration Water\"}],\"Category\":[{\"queryRef\":\"Dim_SamplingMethod.Device Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Fact_Observations\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Dim_SamplingMethod\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Mesh Size Water\"},\"Name\":\"Fact_Observations.Median Mesh Size Water\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Log Concentration Water\"},\"Name\":\"Fact_Observations.Median Log Concentration Water\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Water Observations\"},\"Name\":\"Fact_Observations.Water Observations\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Device Category\"},\"Name\":\"Dim_SamplingMethod.Device Category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Concentration Water\"},\"Name\":\"Fact_Observations.Median Concentration Water\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Median Mesh Size Water\"}}}]},\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V7: Mesh Size Aperture Bias (0.333 mm benchmark)'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 500.00,
+          "x": 760.00,
+          "y": 120.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"p3_v9_ethical\",\"layouts\":[{\"id\":0,\"position\":{\"x\":975,\"y\":455,\"width\":285,\"height\":245,\"z\":11000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Calendar.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Ethical Baseline Value\"}],\"Tooltips\":[{\"queryRef\":\"Fact_Observations.Concentration 25th Pct\"},{\"queryRef\":\"Fact_Observations.Concentration 75th Pct\"},{\"queryRef\":\"Fact_Observations.Total Observations\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Calendar\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Year\"},\"Name\":\"Dim_Calendar.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Ethical Baseline Value\"},\"Name\":\"Fact_Observations.Ethical Baseline Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Concentration 25th Pct\"},\"Name\":\"Fact_Observations.Concentration 25th Pct\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Concentration 75th Pct\"},\"Name\":\"Fact_Observations.Concentration 75th Pct\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Ethical Baseline Value\"}}}]},\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'ETHICAL REDESIGN: Zero Baseline and Context'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Dim_Calendar.Year\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Calendar\"}},\"Property\":\"Year\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"isLockedInViewMode\":true}]",
+          "height": 245.00,
+          "width": 285.00,
+          "x": 975.00,
+          "y": 455.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"p3_v9_misleading\",\"layouts\":[{\"id\":0,\"position\":{\"x\":670,\"y\":455,\"width\":285,\"height\":245,\"z\":10000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Calendar.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Misleading Truncated Value\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Calendar\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Year\"},\"Name\":\"Dim_Calendar.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Misleading Truncated Value\"},\"Name\":\"Fact_Observations.Misleading Truncated Value\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'MISLEADING: Truncated Baseline at 0.200'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Dim_Calendar.Year\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim_Calendar\"}},\"Property\":\"Year\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"isLockedInViewMode\":true}]",
+          "height": 245.00,
+          "width": 285.00,
+          "x": 670.00,
+          "y": 455.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"p3_v9_organisations\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225,\"y\":455,\"width\":430,\"height\":245,\"z\":9000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Organization.Organization\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact_Observations.Total Observations\"}],\"Series\":[{\"queryRef\":\"Dim_Organization.Sector Type\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t_0\",\"Entity\":\"Dim_Organization\",\"Type\":0},{\"Name\":\"t_1\",\"Entity\":\"Fact_Observations\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Organization\"},\"Name\":\"Dim_Organization.Organization\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_1\"}},\"Property\":\"Total Observations\"},\"Name\":\"Fact_Observations.Total Observations\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t_0\"}},\"Property\":\"Sector Type\"},\"Name\":\"Dim_Organization.Sector Type\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'V9 Part 1: Global Institutional Provenance'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 245.00,
+          "width": 430.00,
+          "x": 225.00,
+          "y": 455.00,
+          "z": 9000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Marine_Microplastics_Executive5147708398659474.json"
+}

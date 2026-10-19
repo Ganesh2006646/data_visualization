@@ -1,0 +1,5 @@
+SettingID,Marine Setting,Unit,Compartment,Acute Threshold,Physical Matrix
+1,Beach,pieces/m3,Coastal Sand Surface,> 40000 pieces/m3,Beach Sand
+2,Nurdle Patrol,pieces/10 mins,Citizen-Science Beach Walk,> 200 / 10 mins,Plastic Pellets
+3,Ocean sediment,pieces kg-1 d.w.,Seafloor Benthic Sediment,> 200 pieces kg-1,Benthic Core
+4,Ocean water,pieces/m3,Volumetric Surface Water,>= 10 pieces/m3,Water Column

@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & checkpoints
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Power BI temporary caches & local settings
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/editorSettings.json
+
+# IDE & OS temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
