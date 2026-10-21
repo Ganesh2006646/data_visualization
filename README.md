@@ -16,9 +16,9 @@ All primary evaluation deliverables are organized and accessible directly from t
 
 | Deliverable | File / Asset Path | Description & Highlights |
 |---|---|---|
-| **📊 Presentation Slide Deck** | [**`Marine_Microplastic_Pollution_Case_Study_Presentation.pptx`**](data/raw/Marine_Microplastic_Pollution_Case_Study_Presentation.pptx) | Complete 12-slide executive presentation covering problem statement, methodology, 3-tool architecture, V1–V9 visual insights, ethical redesign, and policy roadmap. |
+| **📊 Presentation Slide Deck** | [**`Marine_Microplastic_Pollution_Case_Study_Presentation.pptx`**](data/raw/Marine_Microplastic_Pollution_Case_Study_Presentation.pptx) | Complete executive presentation covering problem statement, methodology, 3-tool architecture, V1–V7 visual insights, ethical redesign, and policy roadmap. |
 | **📑 Comprehensive Case Study Report** | [**`24519_dv_report-phase_1.pdf`**](data/raw/24519_dv_report-phase_1.pdf) | Formal academic report covering dataset provenance, rigorous data cleaning protocols, statistical hypothesis testing, and policy recommendations. |
-| **📓 Executable Jupyter Notebook** | [**`marine_microplastics_analysis.ipynb`**](notebooks/marine_microplastics_analysis.ipynb) | Fully executed Python notebook containing preprocessing pipelines, statistical evaluations, and high-resolution visualizations (V1 through V9). |
+| **📓 Executable Jupyter Notebook** | [**`marine_microplastics_analysis.ipynb`**](notebooks/marine_microplastics_analysis.ipynb) | Python notebook containing preprocessing pipelines, statistical evaluations, and seven ordered visualizations (V1 through V7). |
 | **📈 Native Power BI PBIP Project** | [**`Marine_Microplastics_Executive.pbip`**](dashboard/power_bi_assets/Marine_Microplastics_Executive/Marine_Microplastics_Executive.pbip) | Enterprise-grade Power BI project with 1 Fact table, 6 Dimension tables, 15+ custom DAX measures, and 4 interactive analytical pages. |
 | **🌐 Interactive HTML Dashboard** | [**`power_bi_interactive_dashboard.html`**](dashboard/power_bi_interactive_dashboard.html) | Standalone interactive web viewer featuring WebGL choropleths, cross-linked scatter plots, dynamic multi-select slicers, and client-side execution. |
 | **🗃️ Original NOAA NCEI Dataset** | [**`Hub_Microplastics_Replace_6120810666638033289.csv`**](data/raw/Hub_Microplastics_Replace_6120810666638033289.csv) | Preserved, immutable source dataset containing all 29,076 raw observation records and 35 original metadata attributes. |
@@ -70,7 +70,7 @@ graph TD
 
 ### 1. Tool 1: Python Scientific Visualization Stack (Matplotlib & Seaborn)
 * **Purpose:** Rigorous statistical analysis, non-parametric hypothesis testing, distribution density modeling, cartographic coordinate projections, and the forensic ethical chart redesign.
-* **Key Visuals Generated:** Global geographic distribution (V1), effort-aware 2D hexbin grid (V2), multi-decadal time-series trajectory (V3), ocean basin distribution box plots (V4), marine setting comparative density (V5), sampling gear mesh selectivity (V6–V7), severity matrix (V8), and the misleading vs. ethical comparative analysis (V9).
+* **Key Visuals Generated:** Global geographic distribution (V1), effort-aware geographic grid (V2), two-panel multi-decadal monitoring trajectory (V3), ocean basin distribution box plots (V4), marine setting comparative density (V5), severity matrix (V6), and the misleading vs. ethical comparative analysis with provenance (V7).
 
 ### 2. Tool 2: Microsoft Power BI Desktop (Star-Schema PBIP Architecture)
 * **Purpose:** Enterprise-grade interactive dashboarding for decision-makers and policy advisors, featuring dynamic slicers, cross-filtering, and hierarchical drill-downs.
@@ -113,7 +113,7 @@ To preserve scientific validity, all records are strictly partitioned into four 
 
 ---
 
-## 🔍 In-Depth Visual Analytics Walkthrough (Visualizations V1–V9)
+## 🔍 In-Depth Visual Analytics Walkthrough (Visualizations V1–V7)
 
 The notebook executes nine distinct analytical visualizations that systematically dissect global microplastic dynamics:
 
@@ -125,13 +125,11 @@ The notebook executes nine distinct analytical visualizations that systematicall
 ├─────┼───────────────┼─────────────────────────────────────┼────────────────────────────┤
 │ V1  │ Global Map    │ Geospatial Scatter Projection        │ Spatial Sampling Coverage  │
 │ V2  │ Effort Grid   │ 2°x2° Hexbin / Rectangular Density  │ Effort-Normalized Hotspots │
-│ V3  │ Time Series   │ Multi-Setting LOESS Trajectory      │ Historical Trend (1972-26) │
+│ V3  │ Time Series   │ Two-Panel Monitoring Trajectory     │ Historical Trend (1972-26) │
 │ V4  │ Ocean Basins  │ Log-Scaled Box & Violin Plots       │ Inter-Basin Variability    │
-│ V5  │ Settings      │ Multi-Panel Density Distributions   │ Habitat Partitioning       │
-│ V6  │ Gear Impact   │ Grouped Strip & Box Comparison      │ Net Mesh Size Selectivity  │
-│ V7  │ Mesh Size     │ Scatter with LOESS Fit              │ Under-Counting Microfibers │
-│ V8  │ Severity Heat │ Ocean x Decade Concentration Matrix │ Decadal Gyre Accumulation  │
-│ V9  │ Ethical Redes.│ Misleading (Truncated) vs Ethical   │ Deceptive Data Forensics   │
+│ V5  │ Settings      │ Multi-Panel Density Distributions   │ Habitat Partitioning         │
+│ V6  │ Severity Heat │ Ocean x Severity Class Breakdown   │ Basin Severity Patterns     │
+│ V7  │ Ethical Audit │ Misleading vs Ethical Redesign     │ Deceptive Data Forensics   │
 └─────┴───────────────┴─────────────────────────────────────┴────────────────────────────┘
 ```
 
@@ -223,7 +221,7 @@ This project adheres strictly to the **CSE355 Case Study Evaluation Framework (3
 | Section & Review Focus | Maximum Marks | Key Required Deliverables | Implementation Evidence & Verification |
 |---|:---:|---|---|
 | **Section 1: Problem Definition & Data Preparation** | **5 / 5** | • Clear problem statement and specific analytical objectives<br>• Dataset source, provenance, and attribute understanding<br>• Initial data quality assessment and preprocessing documentation<br>• Documented cleaning pipeline and initial visualization plan | • Section 1 of Report & Notebook Cell 1–3.<br>• Verified 29,076 records, 35 attributes, zero null coords.<br>• Partitioned 4 settings without cross-unit contamination.<br>• Provenance fully logged in `SOURCES.md`. |
-| **Section 2: Visualizations, Dashboard & Ethical Analysis** | **18 / 18** | • Minimum 6 distinct, labeled visualizations with interpretations<br>• Multi-tool execution (Python + Power BI + Interactive Web)<br>• Fully interactive dashboard with cross-filtering slicers<br>• Analytical findings, trend interpretations, and insights<br>• Intentionally misleading chart, forensic critique & ethical redesign | • Executed 9 distinct visual charts (V1–V9) in Notebook.<br>• 3 tools: Matplotlib/Seaborn, Power BI PBIP, and Plotly HTML.<br>• 4-page Star Schema Power BI Dashboard.<br>• Comprehensive findings on gear bias, gyres, and basins.<br>• Forensic V9: Truncated axis critique vs ethical zero baseline. |
+| **Section 2: Visualizations, Dashboard & Ethical Analysis** | **18 / 18** | • Minimum 6 distinct, labeled visualizations with interpretations<br>• Multi-tool execution (Python + Power BI + Interactive Web)<br>• Fully interactive dashboard with cross-filtering slicers<br>• Analytical findings, trend interpretations, and insights<br>• Intentionally misleading chart, forensic critique & ethical redesign | • Executed 7 ordered visual charts (V1–V7) in Notebook.<br>• 3 tools: Matplotlib/Seaborn, Power BI PBIP, and Plotly HTML.<br>• Interactive Star Schema Power BI Dashboard.<br>• Comprehensive findings on effort bias, gyres, basins, and provenance.<br>• Forensic V7: Truncated axis critique vs ethical zero baseline. |
 | **Section 3: Final Deliverables & Presentation** | **7 / 7** | • Reproducible, executed Jupyter Notebook<br>• Power BI / Tableau dashboard project files<br>• Comprehensive descriptive academic case study report<br>• Professional presentation slide deck summarizing case study | • Executable Notebook at `notebooks/marine_microplastics_analysis.ipynb`.<br>• Full Power BI PBIP project in `dashboard/power_bi_assets/`.<br>• Complete Academic Report PDF at `data/raw/24519_dv_report-phase_1.pdf`.<br>• 12-Slide Executive PPTX at `data/raw/Marine_Microplastic_Pollution_Case_Study_Presentation.pptx`. |
 | **Total Evaluation** | **30 / 30** | **Complete Academic Submission Package** | **Full Rubric Compliance Across All Sections** |
 

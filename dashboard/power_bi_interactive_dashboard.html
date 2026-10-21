@@ -171,6 +171,13 @@
       display: flex;
       flex-direction: column;
     }
+    .page-1-map .visual-box { min-height: 520px; }
+    .page-1-map #chart-map { height: 440px !important; }
+    .page-1-map .insight-card { margin-top: 8px; }
+    .ethics-page .visual-box { min-height: 560px; }
+    .ethics-page .ethics-chart { height: 390px !important; }
+    .ethics-page .insight-card { min-height: 110px; }
+    .provenance-page .pbi-kpi-row { grid-template-columns: repeat(4, 1fr); }
     .visual-header {
       font-size: 12px; font-weight: 700; color: var(--pbi-navy); margin-bottom: 8px;
       border-bottom: 1px solid var(--pbi-border); padding-bottom: 6px;
@@ -352,7 +359,7 @@
     <div class="pbi-canvas">
       
       <!-- PAGE 1: GLOBAL SAMPLING FOOTPRINT & EFFORT -->
-      <div id="page-1" class="page-content active">
+      <div id="page-1" class="page-content active page-1-map">
         
         <!-- KPI Cards Row -->
         <div class="pbi-kpi-row">
@@ -383,29 +390,17 @@
           </div>
         </div>
 
-        <!-- Row 1: Map + Ocean Bar -->
-        <div class="grid-2col">
+        <!-- Row 1: Full geographic hotspot map -->
+        <div class="grid-1col">
           <div class="visual-box">
             <div class="visual-header">
-              <span>Global Observation Footprint (Sampling Effort Map)</span>
-              <span class="visual-tag">V1 • Geographic Effort</span>
+              <span>V1: Global Geographic Hotspot Map — All Records and Marine Settings</span>
+              <span class="visual-tag">All point-level observations</span>
             </div>
-            <div id="chart-map" style="height: 330px;"></div>
+            <div id="chart-map" style="height: 440px;"></div>
             <div class="insight-card" id="insight-map">
-              <div class="insight-title">💡 Key Analytical Insight — Geographic Effort vs. True Hotspots</div>
-              <p>Map density reflects <strong>where ships sail and volunteers walk</strong> rather than true global pollution intensity. <strong>93.8%</strong> of all records lie in the Northern Hemisphere, clustered along US coastal margins (Nurdle Patrol) and North Atlantic cruise tracks (SEA). The Southern Ocean remains a profound observation desert (only 27 records).</p>
-            </div>
-          </div>
-
-          <div class="visual-box">
-            <div class="visual-header">
-              <span>Observations by Ocean Basin</span>
-              <span class="visual-tag">Click bar to filter</span>
-            </div>
-            <div id="chart-ocean-bar" style="height: 330px;"></div>
-            <div class="insight-card" id="insight-ocean-bar">
-              <div class="insight-title">💡 Key Analytical Insight — Basin Disparity</div>
-              <p>The Atlantic Ocean accounts for <strong>66.7%</strong> of all global records (19,394), followed by the Pacific Ocean (24.4%, 7,103). The Indian, Arctic, and Southern oceans combined represent under <strong>9%</strong> of global observation effort.</p>
+              <div class="insight-title">💡 Inference — Geographic Effort vs. True Hotspots</div>
+              <p>This map displays every filtered record as a geographic point and includes all four marine settings. Dense clusters show where ships sail and volunteers walk; they do not automatically indicate the highest pollution. The Northern Hemisphere contains <strong>93.8%</strong> of records, while the Southern Ocean remains sparsely observed.</p>
             </div>
           </div>
         </div>
@@ -512,12 +507,12 @@
           </div>
         </div>
 
-        <!-- Row 2: NOAA Class Stacked Bar + 5x5 Grid Effort vs Concentration -->
+        <!-- Row 2: NOAA Class Stacked Bar + Geographic Effort Grid -->
         <div class="grid-2col-even">
           <div class="visual-box">
             <div class="visual-header">
               <span>NOAA Severity Class Composition Across Basins (pieces/m³)</span>
-              <span class="visual-tag">V8 • Ordinal Classification</span>
+              <span class="visual-tag">V6 • Ordinal Classification</span>
             </div>
             <div id="chart-class-comp" style="height: 250px;"></div>
             <div class="insight-card">
@@ -528,38 +523,33 @@
 
           <div class="visual-box">
             <div class="visual-header">
-              <span>5°×5° Grid: Sampling Effort (n) vs. Measured Median Concentration</span>
-              <span class="visual-tag">V2 • Bivariate Grid</span>
+              <span>V2: Geographic Effort-Aware Hotspot Grid</span>
+              <span class="visual-tag">V2 • Geographic Grid</span>
             </div>
             <div id="chart-grid-effort" style="height: 250px;"></div>
             <div class="insight-card">
-              <div class="insight-title">💡 Key Analytical Insight — Effort &ne; High Concentration</div>
-              <p>The most heavily sampled 5°×5° grid cell on Earth (20°N, 65°W; n = 1,297 tows) has a modest median of 0.0135 pieces/m³. Moderately sampled cells (n = 5–60) in the Mediterranean and Bay of Bengal exhibit medians <strong>100× to 1,000× higher</strong>.</p>
+              <div class="insight-title">💡 Key Analytical Insight — Geographic Effort &ne; High Concentration</div>
+              <p>Bubble size shows sampling effort and color shows the cell median on the geographic grid. The most heavily sampled cells are not automatically the most contaminated, while sparsely sampled gyre and coastal cells can show much higher medians.</p>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- PAGE 3: PROTOCOL BIAS & INSTITUTIONAL PROVENANCE -->
-      <div id="page-3" class="page-content">
+      <!-- PAGE 3: INSTITUTIONAL PROVENANCE -->
+      <div id="page-3" class="page-content provenance-page">
         
         <!-- KPI Cards Row -->
         <div class="pbi-kpi-row">
           <div class="pbi-card coral">
-            <div class="card-lbl">Mesh-Concentration Correlation</div>
-            <div class="card-val">-0.415</div>
-            <div class="card-sub">Spearman rho (p &lt; 1e-100, n = 16,988)</div>
-          </div>
-          <div class="pbi-card">
-            <div class="card-lbl">Standard Net Share</div>
-            <div class="card-val">82.4%</div>
-            <div class="card-sub">0.333–0.335 mm Manta/Neuston</div>
-          </div>
-          <div class="pbi-card steel">
             <div class="card-lbl">Top 2 Organizations Share</div>
             <div class="card-val">66.3%</div>
-            <div class="card-sub">UT MSI (10,615) & SEA (8,665)</div>
+            <div class="card-sub">UT MSI and SEA contributions</div>
+          </div>
+          <div class="pbi-card">
+            <div class="card-lbl">Nurdle Patrol Records</div>
+            <div class="card-val">10,615</div>
+            <div class="card-sub">Citizen-science provenance records</div>
           </div>
           <div class="pbi-card amber">
             <div class="card-lbl">Nurdle Missingness</div>
@@ -567,45 +557,18 @@
             <div class="card-sub">All 10,615 rows use 10-min field</div>
           </div>
           <div class="pbi-card seafoam">
-            <div class="card-lbl">Fine Net vs Standard Ratio</div>
-            <div class="card-val">~450×</div>
-            <div class="card-sub">Median: 0.976 vs 0.0022 pieces/m³</div>
+            <div class="card-lbl">Ethical Redesign</div>
+            <div class="card-val">0.0</div>
+            <div class="card-sub">True zero baseline retained on Page 4</div>
           </div>
         </div>
 
-        <!-- Row 1: Mesh Scatter + Mesh Regimes Bar -->
-        <div class="grid-2col-even">
-          <div class="visual-box">
-            <div class="visual-header">
-              <span>Mesh Size vs. Reported Concentration (Ocean Water, pieces/m³)</span>
-              <span class="visual-tag">V7 • Observational Mesh Bias</span>
-            </div>
-            <div id="chart-mesh" style="height: 300px;"></div>
-            <div class="insight-card">
-              <div class="insight-title">💡 Key Analytical Insight — Inverse Scaling Law</div>
-              <p>Strong negative correlation (<strong>Spearman &rho; = -0.415, p &lt; 1e-100</strong>). Net aperture acts as a mechanical filter: standard 0.333–0.335 mm Neuston nets miss tiny microfibers and nano-fragments, underestimating particle abundance by up to 3 orders of magnitude.</p>
-            </div>
-          </div>
-
-          <div class="visual-box">
-            <div class="visual-header">
-              <span>Median Concentration & IQR Across Mesh-Size Regimes</span>
-              <span class="visual-tag">V7 • Regime Comparison</span>
-            </div>
-            <div id="chart-mesh-regimes" style="height: 300px;"></div>
-            <div class="insight-card">
-              <div class="insight-title">💡 Key Analytical Insight — Regime Contrast</div>
-              <p>Fine-mesh tows (0.05–0.20 mm) report a median concentration of <strong>0.976 pieces/m³</strong>, compared to only <strong>0.0022 pieces/m³</strong> for standard 0.335 mm Neuston tows — a 450× difference driven entirely by sampling equipment aperture.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 2: Top Orgs Pareto + Method x Ocean Matrix -->
+        <!-- Row 1: Institutional Provenance -->
         <div class="grid-2col">
           <div class="visual-box">
             <div class="visual-header">
               <span>Top Contributing Institutions (Provenance Audit)</span>
-              <span class="visual-tag">O9 • Data Provenance</span>
+              <span class="visual-tag">V7 • Data Provenance</span>
             </div>
             <div id="chart-orgs" style="height: 300px;"></div>
             <div class="insight-card">
@@ -614,23 +577,12 @@
             </div>
           </div>
 
-          <div class="visual-box">
-            <div class="visual-header">
-              <span>Sampling Method × Ocean Basin Heatmap Matrix</span>
-              <span class="visual-tag">V6 • Protocol Confounding</span>
-            </div>
-            <div id="chart-method-matrix" style="height: 300px;"></div>
-            <div class="insight-card">
-              <div class="insight-title">💡 Key Analytical Insight — Geographic Confounding</div>
-              <p>Over 90% of Atlantic samples use Neuston nets, whereas Pacific and Arctic studies deploy grab samples and high-volume intake pumps, proving that inter-basin differences are confounded by sampling methodology.</p>
-            </div>
-          </div>
         </div>
 
       </div>
 
       <!-- PAGE 4: DATA VISUALIZATION ETHICS & FORENSIC REDESIGN -->
-      <div id="page-4" class="page-content">
+      <div id="page-4" class="page-content ethics-page">
         
         <!-- KPI Cards Row -->
         <div class="pbi-kpi-row">
@@ -663,7 +615,7 @@
               <span>⚠️ [MISLEADING] Truncated Baseline (Starts at 0.200)</span>
               <span class="visual-tag" style="background: #FEE2E2; color: #991B1B;">Bad Practice</span>
             </div>
-            <div id="chart-v9-bad" style="height: 280px;"></div>
+            <div id="chart-v9-bad" class="ethics-chart" style="height: 390px;"></div>
             <div class="insight-card" style="background: #FEF2F2; border-color: #F87171; color: #991B1B;">
               <div class="insight-title" style="color: #DC2626;">❌ Why This Visual Misleads Policymakers</div>
               <p>By truncating the Y-axis to start at 0.200 instead of 0.0, a modest 10% change from 0.2100 to 0.2316 pieces/m³ looks like an alarming <strong>300% visual spike</strong>! It completely omits the Interquartile Range and hides the fact that cruise expeditions shifted during COVID-19.</p>
@@ -675,7 +627,7 @@
               <span>✅ [ETHICAL REDESIGN] True Zero Baseline, IQR & Sample Sizes</span>
               <span class="visual-tag" style="background: #D1FAE5; color: #065F46;">Ethical Design</span>
             </div>
-            <div id="chart-v9-good" style="height: 280px;"></div>
+            <div id="chart-v9-good" class="ethics-chart" style="height: 390px;"></div>
             <div class="insight-card" style="background: #ECFDF5; border-color: #34D399; color: #065F46;">
               <div class="insight-title" style="color: #059669;">✔️ Why This Visual Preserves Scientific Truth</div>
               <p>With a true zero baseline, annual medians are virtually flat (~0.21–0.23). The Interquartile Range (Q25–Q75) spans up to 1.02 pieces/m³, demonstrating that <strong>spatial ocean variance completely dwarfs year-over-year median differences</strong>.</p>
@@ -689,7 +641,7 @@
             <span>Multi-Compartment Distribution Across All 4 Marine Settings (Independent Scales)</span>
             <span class="visual-tag">V5 • Unit Separation</span>
           </div>
-          <div id="chart-compartments" style="height: 270px;"></div>
+          <div id="chart-compartments" style="height: 260px;"></div>
           <div class="insight-card">
             <div class="insight-title">💡 Key Ethical Principle — The "Unit Trap" Safeguard</div>
             <p>Notice the vast scale separation: Ocean water has a median of 0.009 pieces/m³; Beach sand has a median of 4,080 pieces/m³; Nurdle Patrol reports timed counts (median 1.0 / 10 mins); and Sediment cores are measured per dry kilogram. <strong>Pooling these four compartments into a single average is mathematically and scientifically invalid.</strong></p>
@@ -724,7 +676,7 @@
   <div class="pbi-bottom-tabs">
     <button class="tab-btn active" onclick="switchPage('page-1', this)">📊 1. Global Sampling Footprint & Effort</button>
     <button class="tab-btn" onclick="switchPage('page-2', this)">🌊 2. Basin Concentrations & Hypothesis Tests</button>
-    <button class="tab-btn" onclick="switchPage('page-3', this)">🔬 3. Protocol Bias, Mesh Size & Provenance</button>
+    <button class="tab-btn" onclick="switchPage('page-3', this)">🔬 3. Institutional Provenance</button>
     <button class="tab-btn" onclick="switchPage('page-4', this)">⚖️ 4. Visualization Ethics & Forensic Redesign</button>
   </div>
 
@@ -858,6 +810,23 @@
             hoverinfo: 'text',
             marker: { size: s === 'Ocean water' ? 4 : 5.5, color: SETTING_COLORS[s], opacity: 0.7 },
             name: `${s} (n=${sub.length})`
+          });
+          const hotspots = PBI_DATA.grid_cells
+            .filter(g => selOceans.includes(g.Ocean_Clean))
+            .slice()
+            .sort((a, b) => b.median - a.median)
+            .slice(0, 12);
+          tracesMap.push({
+            type: 'scattergeo',
+            mode: 'markers+text',
+            lat: hotspots.map(p => p.Lat_Bin),
+            lon: hotspots.map(p => p.Lon_Bin),
+            text: hotspots.map((p, i) => `Hotspot ${i + 1}`),
+            hovertext: hotspots.map(p => `<b>Effort-aware hotspot</b><br>Ocean: ${p.Ocean_Clean}<br>Grid: ${p.Lat_Bin}°, ${p.Lon_Bin}°<br>Samples: ${p.n}<br>Median: ${p.median.toFixed(4)} pieces/m³`),
+            hoverinfo: 'text',
+            marker: { size: 10, symbol: 'star', color: '#C0392B', line: { color: '#FFFFFF', width: 1 } },
+            textposition: 'top center',
+            name: 'Top effort-aware hotspots'
           });
         }
       });
@@ -994,74 +963,32 @@
         legend: { orientation: 'h', y: -0.32, font: { size: 9 } }
       }, { responsive: true, displayModeBar: false });
 
-      // 5x5 Grid Effort vs Concentration
+      // V2 geographic effort-aware grid
       const gc = PBI_DATA.grid_cells.filter(g => selOceans.includes(g.Ocean_Clean));
       Plotly.newPlot('chart-grid-effort', [{
         type: 'scatter',
         mode: 'markers',
-        x: gc.map(g => g.n),
-        y: gc.map(g => g.median + 1e-4),
+        x: gc.map(g => g.Lon_Bin),
+        y: gc.map(g => g.Lat_Bin),
         text: gc.map(g => `Ocean: ${g.Ocean_Clean}<br>Coord: ${g.Lat_Bin}°, ${g.Lon_Bin}°<br>Effort: n = ${g.n}<br>Median: ${g.median.toFixed(4)}`),
         hoverinfo: 'text',
         marker: {
-          size: 7,
-          color: gc.map(g => OCEAN_COLORS[g.Ocean_Clean] || PALETTE.navy),
+          size: gc.map(g => Math.max(7, Math.min(28, Math.sqrt(g.n) * 2))),
+          color: gc.map(g => g.median),
+          colorscale: 'YlOrRd',
+          showscale: true,
+          colorbar: { title: 'Median concentration' },
           opacity: 0.75
         }
       }], {
-        xaxis: { type: 'log', title: 'Cell Sampling Effort (n tows, log scale)', gridcolor: '#EEE' },
-        yaxis: { type: 'log', title: 'Cell Median + 1e-4 (pieces/m³)', gridcolor: '#EEE' },
+        xaxis: { range: [-180, 180], title: 'Longitude (degrees)', gridcolor: '#EEE' },
+        yaxis: { range: [-90, 90], title: 'Latitude (degrees)', gridcolor: '#EEE', scaleanchor: 'x' },
         margin: { l: 50, r: 20, t: 10, b: 40 }
       }, { responsive: true, displayModeBar: false });
     }
 
     // Render Page 3 Visuals
     function renderPage3(orgQuery) {
-      // Mesh Scatter
-      const ms = PBI_DATA.mesh_sample;
-      Plotly.newPlot('chart-mesh', [{
-        type: 'scatter',
-        mode: 'markers',
-        x: ms.map(m => m.mesh),
-        y: ms.map(m => m.val),
-        marker: { size: 4.5, color: PALETTE.steel, opacity: 0.45 }
-      }], {
-        xaxis: { type: 'log', title: 'Mesh Aperture (mm, log scale)', gridcolor: '#EEE' },
-        yaxis: { type: 'log', title: 'Reported Concentration (pieces/m³)', gridcolor: '#EEE' },
-        margin: { l: 50, r: 20, t: 10, b: 40 },
-        annotations: [{
-          x: 0.335, y: 0.002,
-          xref: 'x', yref: 'y',
-          text: 'Standard 0.335mm Neuston<br>(82% of all tows, lower counts)',
-          showarrow: true, arrowhead: 2, ax: -40, ay: -30,
-          font: { size: 9, color: PALETTE.navy },
-          bgcolor: '#FFF', bordercolor: '#CCC'
-        }]
-      }, { responsive: true, displayModeBar: false });
-
-      // Mesh Regimes Grouped Bar
-      const mr = PBI_DATA.mesh_regimes;
-      Plotly.newPlot('chart-mesh-regimes', [{
-        type: 'bar',
-        x: mr.map(r => r.Mesh_Regime),
-        y: mr.map(r => r.conc_median),
-        error_y: {
-          type: 'data',
-          symmetric: false,
-          array: mr.map(r => r.q75 - r.conc_median),
-          arrayminus: mr.map(r => r.conc_median - r.q25),
-          color: PALETTE.coral,
-          thickness: 1.5
-        },
-        marker: { color: ["#D7191C", "#FDAE61", "#2B83BA", "#0B556C", "#2A9D8F"] },
-        text: mr.map(r => `Med: ${r.conc_median.toFixed(4)}<br>(n=${r.records.toLocaleString()})`),
-        textposition: 'auto'
-      }], {
-        yaxis: { type: 'log', title: 'Median Concentration (pieces/m³, log)', gridcolor: '#EEE' },
-        margin: { l: 50, r: 20, t: 10, b: 45 },
-        xaxis: { tickangle: -15, automargin: true }
-      }, { responsive: true, displayModeBar: false });
-
       // Top Orgs
       let orgs = PBI_DATA.top_orgs;
       if (orgQuery) {
@@ -1083,29 +1010,6 @@
         yaxis: { automargin: true }
       }, { responsive: true, displayModeBar: false });
 
-      // Method x Ocean Heatmap
-      const mo = PBI_DATA.method_ocean;
-      const methods = Array.from(new Set(mo.map(m => m.Method_Clean))).slice(0, 8);
-      const oceans = ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"];
-
-      const zValues = methods.map(m => {
-        return oceans.map(o => {
-          const match = mo.find(x => x.Method_Clean === m && x.Ocean_Clean === o);
-          return match ? Math.log10(match.median + 1e-4) : null;
-        });
-      });
-
-      Plotly.newPlot('chart-method-matrix', [{
-        type: 'heatmap',
-        z: zValues,
-        x: oceans,
-        y: methods,
-        colorscale: 'YlGnBu',
-        colorbar: { title: 'log10(Med)', titleside: 'right', len: 0.9 }
-      }], {
-        margin: { l: 140, r: 30, t: 10, b: 35 },
-        yaxis: { automargin: true }
-      }, { responsive: true, displayModeBar: false });
     }
 
     // Render Page 4 Visuals
